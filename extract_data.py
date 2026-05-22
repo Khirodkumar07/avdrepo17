@@ -18,14 +18,24 @@
 
 #session-17 content
 
-import requests
-import pandas as pd
+# import requests
+# import pandas as pd
 
-response = requests.get("https://jsonplaceholder.typicode.com/users")
-data = response.json()
+# response = requests.get("https://jsonplaceholder.typicode.com/users")
+# data = response.json()
 
-df = pd.DataFrame(data)
-df = df[["id", "name", "email"]]
+# df = pd.DataFrame(data)
+# df = df[["id", "name", "email"]]
 
-print(df)
+# print(df)
+
+
+
+
+##################credential DB_PASSWORD concept of jenkin
+
+
+import os 
+db_password = os.getenv("DB_PASSWORD1")
+print('password: ', db_password) 
 
