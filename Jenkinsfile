@@ -33,6 +33,13 @@ pipeline {
                 checkout scm
             }
         }
+        
+        stage('install dependencies') {
+            steps {
+                bat "${env.PYTHON} -m pip install -r requirements.txt"
+            }
+        }
+
 
         stage('show python version') {
             steps {
