@@ -71,10 +71,9 @@ pipeline {
     agent any
     environment {
         PYTHON = 'C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python314\\python.exe'
-        DB_PASSWORD = credential('DB_PASSWORD')
+        DB_PASSWORD = credentials('DB_PASSWORD')
         
     }
-
     stages {
         stage('Checkout code') {
             steps {
@@ -84,7 +83,7 @@ pipeline {
         stage('run extract_data.py') {
             steps {
                 bat """
-                set DB_PASSWORD = ${env.DB_PASSWORD} 
+                set DB_PASSWORD1 = ${env.DB_PASSWORD} 
                 ${env.PYTHON} extract_data.py
                 """
             }
