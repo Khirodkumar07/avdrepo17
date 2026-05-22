@@ -62,7 +62,7 @@
 
 
 
-#jenkins credential (DB_PASSWORD)
+// #jenkins credential (DB_PASSWORD)
 
 
 
